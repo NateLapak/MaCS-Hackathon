@@ -2,8 +2,11 @@
 
 MacEwan Universisty CS hackathon project. 
 
-Group members: 
-  Nathan Lapak 
-  Ayesha Khan
-  Fahad Ali
-  Andrew Numrich
+<h2> Group members </h2>
+  <ul>
+    <li>Nathan Lapak</li>
+  <li> Ayesha Khan</li>
+  <li>Fahad Ali</li>
+  <li>Andrew Numrich </li>
+  </ul>
+
