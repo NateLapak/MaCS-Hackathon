@@ -5,6 +5,7 @@ import Homepage from "./Pages/Homepage"
 import Login from "./Pages/Login"
 import Register from "./Pages/Register"
 import MovieList from "./Pages/MovieList"
+import Footer from "./Components/Footer/Footer"
 
 
 // Render app
@@ -23,6 +24,8 @@ const App = () => {
           <Route path="/movieList" element={<MovieList />} />
         </Routes>
       </main>
+
+      <Footer />
 
     </div>
   );

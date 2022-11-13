@@ -48,11 +48,11 @@ const Navbar = () => {
                 <Box pb={4} display={{ md: 'none' }}>
                     <Stack as={'nav'} spacing={4}>
                     
-                        <Link as={RouteLink} to="/register" px={2} py={1} rounded={'md'} _hover={{ textDecoration: 'none', bg: "gray.200"}}>
+                        <Link color="white" as={RouteLink} to="/register" px={2} py={1} rounded={'md'} _hover={{ textDecoration: 'none', bg: "gray.200"}}>
                             Register
                         </Link>
 
-                        <Link as={RouteLink} to="/login" px={2} py={1} rounded={'md'} _hover={{ textDecoration: 'none', bg: "gray.200"}}>
+                        <Link color="white" as={RouteLink} to="/login" px={2} py={1} rounded={'md'} _hover={{ textDecoration: 'none', bg: "gray.200"}}>
                             Login
                         </Link>
 

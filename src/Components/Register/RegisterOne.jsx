@@ -6,8 +6,8 @@ import {Link as RouteLink} from "react-router-dom"
 
 const RegisterOne = () => {
 
-    // React hook to keep state of whether password field is shown or hidden
-    const [showPassword, setShowPassword] = useState(false);
+// React hook to keep state of whether password field is shown or hidden
+const [showPassword, setShowPassword] = useState(false);
 
     return (
         <Flex minH={'95vh'} align={'center'} justify={'center'} bg={useColorModeValue('gray.50', 'gray.800' )}>
