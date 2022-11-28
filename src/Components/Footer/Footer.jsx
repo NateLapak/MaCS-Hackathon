@@ -1,24 +1,20 @@
 import {Box,Container, Link, SimpleGrid, Stack, Text, Flex, useColorModeValue} from '@chakra-ui/react';
 
-import {Link as RouteLink} from "react-router-dom"
-
 const Footer = () => {
     return (
     <Box bg="black" color="white">
         <Container as={Stack} maxW={'6xl'} py={10}>
             <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
-                <Stack align={'flex-start'}>
-                    <Link as={RouteLink} to="/">Overview</Link>
+                <Stack align={'flex-start center'}>
+                </Stack>
+                <Stack align={'flex-start center'}>
+                    <Link href="https://github.com/NateLapak/MaCS-Hackathon">Github</Link>
                 </Stack>
                 <Stack align={'flex-start'}>
-                    <Link>About Us</Link>
+                    <Link href="https://www.macewan.ca/home/">Macewan University</Link>
                 </Stack>
-                <Stack align={'flex-start'}>
-                    <Link>Cookies Policy</Link>
-                </Stack>
-                <Stack align={'flex-start'}>
-                    <Link>Facebook</Link>
-                </Stack>
+                
+
             </SimpleGrid>
         </Container>
         <Box py={10}>

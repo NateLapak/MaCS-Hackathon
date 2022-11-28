@@ -21,7 +21,7 @@ const Navbar = () => {
                         </Link>
                         
 
-                        <Link as={RouteLink} to="/movieList" mx={3} px={5} py={1} rounded={'md'} _hover={{ textDecoration: 'none', bg: useColorModeValue('gray.200', 'gray.700'),}}>
+                        <Link as={RouteLink} to="/movielist" mx={3} px={5} py={1} rounded={'md'} _hover={{ textDecoration: 'none', bg: useColorModeValue('gray.200', 'gray.700'),}}>
                             Movie list
                         </Link>
 
