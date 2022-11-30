@@ -11,32 +11,18 @@ const HoverThumbnailOne = () => {
     )
 }
 
-const HoverThumbnailTwo = () => {
-    return (
-        <div className='thumbnail'>
-            <iframe src="https://www.youtube.com/embed/UaVTIH8mujA?autoplay=0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-        </div>
-    )
-}
 
 // First section of homepage
 const SectionOneHome = () => {
     const [isHoveringOne, setIsHoveringOne] = useState(false)
-    const [isHoveringTwo, setIsHoveringTwo] = useState(false)
 
     const handleMouseOverOne = () => {
         setIsHoveringOne(true);
     }
-
-    const handleMouseOverTwo = () => {
-        setIsHoveringTwo(true);
-    }
-
     return (
         <div>
             <div>
                 {isHoveringOne && <HoverThumbnailOne />}    
-                {isHoveringTwo && <HoverThumbnailTwo />}  
             </div>
 
             <div>
@@ -95,7 +81,7 @@ const SectionOneHome = () => {
 
                 {/* Black Panther: Wakanda Forever card */}
                 <Box maxW={'270px'} w={'full'} bg={useColorModeValue('white', 'gray.800' )} boxShadow={'2xl'} rounded={'md'}overflow={'hidden'} m={5}>
-                    <Image  onMouseOver={handleMouseOverTwo} h={[100, 125, 150, 185]} w={'full'} src={ 'https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg'} objectFit={'cover'} />
+                    <Image h={[100, 125, 150, 185]} w={'full'} src={ 'https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg'} objectFit={'cover'} />
     
                     <Box p={6}>
                         <Stack spacing={0} align={'center'} mb={5}>

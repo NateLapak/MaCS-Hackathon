@@ -10,11 +10,38 @@ const HoverThumbnailOne = () => {
     )
 }
 
+const Godfather = () => {
+    return (
+        <div className='thumbnail'>
+            <iframe src="https://www.youtube.com/embed/UaVTIH8mujA?autoplay=0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+        </div>
+    )
+}
+
+// Avengers endgame
+const AvengersEndgame = () => {
+    return (
+        <div className='thumbnail'>
+            <iframe src="https://www.youtube.com/embed/TcMBFSGVi1c?autoplay=0"  title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+        </div>
+    )
+}
+
 const MovieOne = () => {
     const [isHoveringOne, setIsHoveringOne] = useState(false)
+    const [isHoveringTwo, setIsHoveringTwo] = useState(false)
+    const [isHovering, setIsHovering] = useState(false)
 
     const handleMouseOverOne = () => {
         setIsHoveringOne(true);
+    }
+
+    const endgame = () => {
+        setIsHoveringTwo(true);
+    }
+
+    const godfather = () => {
+        setIsHovering(true);
     }
 
     return (
@@ -22,6 +49,8 @@ const MovieOne = () => {
 
             <div>
                 {isHoveringOne && <HoverThumbnailOne />}    
+                {isHovering && <Godfather/>}
+                {isHoveringTwo && <AvengersEndgame />}
             </div>
 
             {/* Header for movie list */}
@@ -185,7 +214,9 @@ const MovieOne = () => {
 
                 {/* The Godfather card */}
                 <Box maxW={'270px'} w={'full'} bg={useColorModeValue('white', 'gray.800' )} boxShadow={'2xl'} rounded={'md'}overflow={'hidden'} m={5}>
-                    <Image h={[100, 125, 150, 185]} w={'full'} src={ 'https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg'} objectFit={'cover'} />
+                    <Image h={[100, 125, 150, 185]} w={'full'} src={ 'https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg'} objectFit={'cover'} 
+                    onMouseOver={godfather}
+                    />
     
                     <Box p={6}>
                         <Stack spacing={0} align={'center'} mb={5}>
@@ -293,7 +324,9 @@ const MovieOne = () => {
 
                 {/* Avengers: Endgame card */}
                 <Box maxW={'270px'} w={'full'} bg={useColorModeValue('white', 'gray.800' )} boxShadow={'2xl'} rounded={'md'}overflow={'hidden'} m={5}>
-                    <Image h={[100, 125, 150, 185]} w={'full'} src={ 'https://upload.wikimedia.org/wikipedia/en/0/0d/Avengers_Endgame_poster.jpg'} objectFit={'cover'} />
+                    <Image h={[100, 125, 150, 185]} w={'full'} src={ 'https://upload.wikimedia.org/wikipedia/en/0/0d/Avengers_Endgame_poster.jpg'} objectFit={'cover'} 
+                        onMouseOver={endgame}
+                    />
     
                     <Box p={6}>
                         <Stack spacing={0} align={'center'} mb={5}>
