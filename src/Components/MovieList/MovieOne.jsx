@@ -1,9 +1,28 @@
+import React, { useState } from 'react';
 import {Heading, Box, Center, Image, Text, Stack, Button, useColorModeValue, Input} from '@chakra-ui/react';
 
+// Function that displays the iframe when you hover over the thumbnail. Top Gun Maverick
+const HoverThumbnailOne = () => {
+    return (
+        <div className='thumbnail'>
+           <iframe src="https://www.youtube.com/embed/giXco2jaZ_4?autoplay=0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+        </div>
+    )
+}
 
 const MovieOne = () => {
+    const [isHoveringOne, setIsHoveringOne] = useState(false)
+
+    const handleMouseOverOne = () => {
+        setIsHoveringOne(true);
+    }
+
     return (
         <div>
+
+            <div>
+                {isHoveringOne && <HoverThumbnailOne />}    
+            </div>
 
             {/* Header for movie list */}
             <Center py={15} my={10}>
@@ -24,7 +43,9 @@ const MovieOne = () => {
             {/* Top Gun: Maverick card */}
             <Center py={4} my={10}>
                 <Box maxW={'270px'} w={'full'} bg={useColorModeValue('white', 'gray.800' )} boxShadow={'2xl'} rounded={'md'}overflow={'hidden'} m={5}>
-                    <Image h={[100, 125, 150, 175]} w={'full'} src={ 'https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg'} objectFit={'cover'} />
+                    <Image h={[100, 125, 150, 175]} w={'full'} src={ 'https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg'} objectFit={'cover'} 
+                    onMouseOver={handleMouseOverOne}
+                    />
     
                     <Box p={6}>
                         <Stack spacing={0} align={'center'} mb={5}>

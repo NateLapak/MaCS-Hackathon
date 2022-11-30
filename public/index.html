@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <style>
-
         .trailer{
             margin: 0 auto;
             padding: 0;
@@ -13,18 +12,6 @@
         .trailer-headings {
           text-align: center;
           font-size: 30px;
-        }
-
-        .overlay{
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0px;
-        }
-
-        .overlay iframe{
-            position: absolute;
-            height: 100%;
-            width: 100%;
         }
 
         h2{
@@ -41,11 +28,29 @@
             column-gap: 60px;
             row-gap: 40px;
         }
-
+          
         .thumbnail{
-            display: flex;
-            align-items: center;
-            justify-content: center;
+          position: absolute;
+          top: 250px;
+          left: 250px;
+          z-index: 1;
+        }
+
+        iframe {
+          width: 1000px;
+          height: 750px;
+        }
+
+        @media (max-height: 800px) {
+            .thumbnail {
+              top: 100px;
+              left: 100px;
+            }
+
+            iframe {
+              width: 400px;
+              height: 250px;
+            }
         }
 
 
